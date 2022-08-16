@@ -10,6 +10,7 @@ public class Task2_hashSet {
         HashSet<String> set = new HashSet<>();
         String [] stringArr = new String[N];
         int count;
+        int spamIndicator = 2;
         for(int i = 0; i < N; i++){
             stringArr[i] = scanner.next();
             set.add(stringArr[i]);
@@ -21,11 +22,11 @@ public class Task2_hashSet {
             {
                 if(team.equals(item))
                 {
-                    if(count < 2) count++;
+                    if(count < spamIndicator) count++;
                     else break;
                 }
             }
-            if (count > 1) System.out.println(item);
+            if (count == spamIndicator) System.out.println(item);
         }
     }
 }

@@ -8,6 +8,7 @@ public class Task2_hashMap {
 
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
+        int spamIndicator = 2;
         String [] stringArr = new String[N];
         for(int i = 0; i < N; i++){
             stringArr[i] = scanner.next();
@@ -19,12 +20,12 @@ public class Task2_hashMap {
                 if(count == null) {
                     count = 0;
                 }
-                if(count < 2){
+                if(count < spamIndicator){
                 counterMap.put(team, ++count);}
          }
 
         for(String team: counterMap.keySet()) {
-            if(counterMap.get(team) == 2){
+            if(counterMap.get(team) == spamIndicator){
                 System.out.println(team);
             }
         }}}
